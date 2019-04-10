@@ -1,9 +1,10 @@
-package com.xhdz.pingiptool;
+package com.xhdz.pingiptool.ui;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -14,6 +15,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.xhdz.pingiptool.R;
+import com.xhdz.pingiptool.ui.activity.PeopleListActivity;
 
 import java.io.IOException;
 
@@ -112,6 +116,7 @@ public class MainActivity extends Activity {
                 mTvPingResult.setText("成功了，服务器是通的！");
                 mTvPingResult.setTextColor(Color.BLUE);
                 Toast.makeText(getApplicationContext(), "成功了，服务器是通的", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, PeopleListActivity.class));
             } else {
                 mTvPingResult.setText("失败了，ping不通服务器！！！");
                 mTvPingResult.setTextColor(Color.RED);

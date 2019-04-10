@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.xhdz.pingiptool.MainActivity">
+    tools:context="com.xhdz.pingiptool.ui.MainActivity">
 
     <TextView
         android:layout_width="match_parent"
